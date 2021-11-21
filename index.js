@@ -8,7 +8,7 @@ bot.on('ready', (ready) => {
     console.log("Bocik działa!")
     bot.user.setActivity("Loading...")
 });
-
+// Tutaj zacznij
 bot.on('ready', async () => {
     const arrayStatus = [
         `Made by Ench__`,
@@ -31,7 +31,7 @@ bot.on('ready', async () => {
         index++;
     }, 4000);
 })
-
+// tutaj skoncz
 bot.on('message', (message) => {
     if(message.content === '!ping') {
         message.channel.send("Pong (uczegredzie)")
