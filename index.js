@@ -6,8 +6,31 @@ bot.login("Twój Token");
 
 bot.on('ready', (ready) => {
     console.log("Bocik działa!")
-    bot.user.setActivity("Made by ench__")
+    bot.user.setActivity("Loading...")
 });
+
+bot.on('ready', async () => {
+    const arrayStatus = [
+        `Made by Ench__`,
+        `Cos tutaj wstaw 1`,
+        `Cos tutaj wstaw 2`,
+        `Cos tutaj wstaw 3`,
+        `Cos tutaj wstaw 4`,
+        `Cos tutaj wstaw 5`,
+        `Cos tutaj wstaw 6`,
+        `Cos tutaj wstaw 7`,
+        `Cos tutaj wstaw 8`,
+        `Cos tutaj wstaw 9`
+    ];
+
+    let index = 0;
+    setInterval(() => {
+        if(index === arrayStatus.length) index=0;
+        const status = arrayStatus[index];
+        bot.user.setActivity(status);
+        index++;
+    }, 4000);
+})
 
 bot.on('message', (message) => {
     if(message.content === '!ping') {
@@ -46,7 +69,8 @@ bot.on('message', message => {
                 name: 'Jakas komenda',
                 value: 'COS ONA ROBI',
                 inline: true
-            },    {
+            },    
+            {
                 name: 'Jakas komenda',
                 value: 'COS ONA ROBI',
                 inline: true
