@@ -90,7 +90,7 @@ bot.on('message', message => {
 
 
 // Jebać cię Greda. Tutaj masz !zarcik
-client.on('message',  async () => {
+client.on('message',  async (message) => {
     if (message.content == '!zarcik') {
 
         /* zartów możesz dodawać ile chcesz
