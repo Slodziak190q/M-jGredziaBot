@@ -87,3 +87,33 @@ bot.on('message', message => {
       message.channel.send(pomoc)  
     } 
 })
+
+
+// Jebać cię Greda. Tutaj masz !zarcik
+client.on('message',  async () => {
+    if (message.content == '!zarcik') {
+
+        /* zartów możesz dodawać ile chcesz
+        wystraczy skopiować 'Zart 1', i w ''
+        wpisać co się chce */
+
+        const zart = [
+            'Zart 1',
+            'Zart 1',
+            'Zart 1',
+            'Zart 1',
+            'Zart 1',
+            'Zart 1',
+            'Zart 1',
+            'Zart 1',
+            'Zart 1',
+
+
+        ];
+
+        const response = zart[Math.floor(Math.random() * zart.length)];
+
+        message.reply(response)
+
+    }
+});
